@@ -1,8 +1,7 @@
 #include <string>
 #include <iostream>
 
-class Task {
-public:
+struct Task {
     std::string title;
     std::string description;
     bool isComplete = false;
@@ -19,8 +18,7 @@ public:
     }
     std::string get_IsComplete() {
         return this->description;
-    }
-
+    
 
     void set_Title(const std::string& title) {
         this->title = title;
@@ -32,5 +30,8 @@ public:
         this->isComplete = status;
     }
 
-private:
+    const void print_task() {
+        std::cout << "Title: " << this->title << std::endl;
+        std::cout << "Desc: " << this->description << std::endl;
+    }
 };
