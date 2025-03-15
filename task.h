@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-
 struct Task {
     std::string title;
     std::string description;
