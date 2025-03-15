@@ -1,9 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-
-#include "task.h"
-
+#include "Task.h"
 
     Task::Task(const std::string& title, const std::string& description) {
         set_Title(title);
@@ -35,4 +33,3 @@
         std::cout << "Title: " << this->title << std::endl;
         std::cout << "Desc: " << this->description << std::endl;
     }
-};
