@@ -5,9 +5,7 @@
 int main(){
 
     TaskManager *list = new TaskManager;
-
-    Task task1("Meet Brian", "Bars at 9:00 PM");
-    list->addTask(task1);
+    list->addTask();
     list->PrintTasks();
 
     delete list;

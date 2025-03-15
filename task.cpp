@@ -22,8 +22,8 @@
     void Task::set_Title(const std::string& title) {
         this->title = title;
     }
-    void Task::set_Description(const std::string& title) {
-        this->title = title;
+    void Task::set_Description(const std::string& description) {
+        this->description = description;
     }
     void Task::set_IsComplete(bool status) {
         this->isComplete = status;

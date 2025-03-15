@@ -13,18 +13,24 @@ class TaskManager{
     public:
 
     TaskManager(){
+}
 
-    }
-
-    void addTask(Task task){
+    void addTask(){
+        std::string title;
+        std::string description;
+        std::cout << "Task Title: ";
+        std::cin >> title;
+        std::cout << "Description: ";
+        std::cin >> description;
+        Task task(title, description);
         Tasks.push_back(task);
     }
 
-    void RemoveTask(){ }
+    void RemoveTask(){}
 
     void PrintTasks(){
         for (Task i : Tasks){
-            std::cout << i.title << std::endl;
+            i.print_task();
         }
     }
 };
