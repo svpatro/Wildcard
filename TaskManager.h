@@ -1,29 +1,30 @@
-#include "Task.h"
+#pragma once
+#include "task.h"
+#include <iostream>
+#include <string>
 #include <vector>
 
 class TaskManager{
 
     private:
 
+    std::vector<Task> Tasks;
+
     public:
 
     TaskManager(){
-        std::vector<Task> Tasks = new *std::vector<string>();
+
     }
 
     void addTask(Task task){
-        Tasks->pushback(task);
+        Tasks.push_back(task);
     }
 
-    void RemoveTask(){
+    void RemoveTask(){ }
 
-
-
-    }
-
-    void PrintTask(){
-        for (int i = 0; i < Tasks.end(); i++){
-            std::cout << Tasks.at(i) << std::endl;
+    void PrintTasks(){
+        for (Task i : Tasks){
+            std::cout << i.title << std::endl;
         }
     }
 };
