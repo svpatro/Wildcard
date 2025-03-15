@@ -1,31 +1,41 @@
-#include "task.h"
+#pragma once
+#include <string>
+#include <iostream>
 
-Task::Task(const std::string& title, const std::string& description) {
-    set_Title(title);
-    set_Description(description);
-}
 
-std::string Task::get_Title() {
-    return this->title;
-}
-std::string Task::get_Description() {
-    return this->description;
-}
-std::string Task::get_IsComplete() {
-    return this->description;
-}
+class Task {
+public:
+    std::string title;
+    std::string description;
+    bool isComplete = false;
+    Task(const std::string& title, const std::string& description) {
+        set_Title(title);
+        set_Description(description);
+    }
 
-void Task::set_Title(const std::string & title) {
-    this->title = title;
-}
-void Task::set_Description(const std::string & title) {
-    this->title = title;
-}
-void Task::set_IsComplete(bool status) {
-    this->isComplete = status;
-}
+    std::string get_Title() {
+        return this->title;
+    }
+    std::string get_Description() {
+        return this->description;
+    }
+    std::string get_IsComplete() {
+        return this->description;
+    }
+    
 
-const void Task::print_task() {
-    std::cout << "Title: " << this->title << std::endl;
-    std::cout << "Desc: " << this->description << std::endl;
-}
+    void set_Title(const std::string& title) {
+        this->title = title;
+    }
+    void set_Description(const std::string& title) {
+        this->title = title;
+    }
+    void set_IsComplete(bool status) {
+        this->isComplete = status;
+    }
+
+    const void print_task() {
+        std::cout << "Title: " << this->title << std::endl;
+        std::cout << "Desc: " << this->description << std::endl;
+    }
+};
