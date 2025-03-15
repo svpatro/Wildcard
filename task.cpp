@@ -4,7 +4,7 @@
 
 #include "task.h"
 
-Task(const std::string& title, const std::string& description)
+Task(const std::string& title, const std::string& description);
 
 std::string Task::get_Title();
 std::string Task::get_Description();
