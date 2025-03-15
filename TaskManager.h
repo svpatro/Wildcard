@@ -8,11 +8,11 @@ class TaskManager{
     public:
 
     TaskManager(){
-        std::vector<string> Tasks = new *std::vector<string>();
+        std::vector<Task> Tasks = new *std::vector<string>();
     }
 
-    void addTask(Task){
-        Tasks->pushback(Task);
+    void addTask(Task task){
+        Tasks->pushback(task);
     }
 
     void RemoveTask(){
