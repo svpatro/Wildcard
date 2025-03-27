@@ -3,9 +3,6 @@
 #include "TaskManager.h"
 
 int main(){
-
-    // Checking Signatures
-
     TaskManager *list = new TaskManager;
     list->addTask();
     list->PrintTasks();
